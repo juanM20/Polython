@@ -1,15 +1,31 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0;url=demo/" />
-    <title>menu-p</title>
-  </head>
-  <body>
-    <!--
-        Visit demo/index.html to see live examples of your element running.
-        This page will automatically redirect you there when run in the browser
-        with `polymer serve`.
-      -->
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio</title>
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyBYD0g_YPIMeK0icjoysPuK-rFx1qKbmWw",
+      authDomain: "polython-organos.firebaseapp.com",
+      databaseURL: "https://polython-organos.firebaseio.com",
+      projectId: "polython-organos",
+      storageBucket: "polython-organos.appspot.com",
+      messagingSenderId: "86826976392"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script type="module" src="menu-p.js"></script>
+
+</head>
+<body>
+
+  <div class="Menu_Principal">
+    <menu-p></menu-p>
+  </div>
+</body>
 </html>

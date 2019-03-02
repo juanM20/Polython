@@ -15,10 +15,31 @@ class MenuP extends PolymerElement {
         :host {
           display: block;
         }
+
+        nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+
+        }
+
       </style>
-      <h2>Hello [[prop1]]!</h2>
+
+      <nav>
+        <ul>
+            <li> Inicio </li>
+            <ul>
+              <li>NombreAplicacion</li>
+              <li>Registro de donador</li>
+              <li>Buscar Donadores</li>
+            </ul>
+          <li> Login </li>
+        </ul>
+      </nav>
     `;
   }
+  
   static get properties() {
     return {
       prop1: {
