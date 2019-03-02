@@ -1,6 +1,6 @@
-# \<menu-p\>
+# \<cuadro-info\>
 
-Menu_de_navegacion
+inserte titulo imagen y texto
 
 ## Install the Polymer-CLI
 

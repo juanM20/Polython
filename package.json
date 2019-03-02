@@ -1,7 +1,7 @@
 {
-  "name": "menu-p",
-  "description": "Menu_de_navegacion",
-  "main": "menu-p.js",
+  "name": "cuadro-info",
+  "description": "inserte titulo imagen y texto",
+  "main": "cuadro-info.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0"
   },
