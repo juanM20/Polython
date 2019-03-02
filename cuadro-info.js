@@ -16,15 +16,26 @@ class CuadroInfo extends PolymerElement {
           display: block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h2> [[titulo]]!</h2> <br>
+      <p> [[info]] </p> <br>
+      <button type="button" >[[boton]]</button>
+
     `;
   }
   static get properties() {
     return {
-      prop1: {
+      titulo: {
         type: String,
-        value: 'cuadro-info',
+        value: '',
       },
+      info: {
+        type: String,
+        value: '',
+      },
+      boton:{
+        type: String,
+        value: '',
+      }
     };
   }
 }
