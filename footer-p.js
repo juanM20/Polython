@@ -22,7 +22,7 @@ class FooterP extends PolymerElement {
           right: 0;
           bottom: 0;
           padding: 0;
-          background-color: : #000080;
+          background-color: #000080;
         }
 
         .footer p {
@@ -30,9 +30,10 @@ class FooterP extends PolymerElement {
           font-size: 2em;
           color: #FFFFFF;
         }
+
       </style>
 
-      <footer>
+      <footer class="footer">
         <p>Desarrollado por Qubits</p>
         <p>Polython 2019</p>
         <p>Ciudad de México</p>
