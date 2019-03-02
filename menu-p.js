@@ -17,11 +17,12 @@ class MenuP extends PolymerElement {
         }
 
         nav ul {
+          display: flex;
           list-style-type: none;
           margin: 0;
           padding: 0;
           overflow: hidden;
-
+          flex-direction: row;
         }
 
       </style>
@@ -39,7 +40,7 @@ class MenuP extends PolymerElement {
       </nav>
     `;
   }
-  
+
   static get properties() {
     return {
       prop1: {
