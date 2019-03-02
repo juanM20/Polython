@@ -27,15 +27,17 @@ class FooterP extends PolymerElement {
 
         .footer p {
           font-family: sans-serif;
-          font-size: 2em;
+          font-size: 12pt;
           color: #FFFFFF;
         }
       </style>
 
       <footer>
-        <p>Desarrollado por Qubits</p>
-        <p>Polython 2019</p>
-        <p>Ciudad de México</p>
+        <center>
+          <p>Desarrollado por Qubits</p>
+          <p>Polython 2019</p>
+          <p>Ciudad de México</p>
+        </center>
       </footer>
     `;
   }
