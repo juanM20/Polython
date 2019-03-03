@@ -7,7 +7,7 @@ refData.once('value', snapshot => {
 });
 */
 
-const data = firebase.database();
+const database = firebase.database();
 let data = {
   "Moscow": {
     country: "Russia"
