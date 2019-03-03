@@ -6,7 +6,7 @@ var ciudad;
 var correoElectronico;
 var donacionesOfrecidas = [];
 var certificado = {
-  nombre : null;
+  nombre : null,
   direccion : null;
 };
 
