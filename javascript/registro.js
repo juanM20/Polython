@@ -11,7 +11,7 @@ function recuperarDatos() {
     correoElectronico : '',
     donacionesOfrecidas : [],
     certificadoNombre : ''
-  }
+  };
 
   var select;
   console.log("Entrando a la recuperación de datos...");
