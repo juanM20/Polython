@@ -40,6 +40,18 @@ class CuadroInfo extends PolymerElement {
           display:flex;
           flex-direction: row;
           justify-content: flex-start;
+
+          background-color: #EBF9FA;
+          border: none;
+          color: #000000;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          width:10%;
         }
 
       </style>
@@ -52,7 +64,7 @@ class CuadroInfo extends PolymerElement {
           <p> [[info]] </p>
         </div>
         <div class="btn_section">
-          <button type="button" >[[boton]]</button>
+          <a href="[[enlace]]">[[boton]]</button>
         </div>
 
       </div>
@@ -70,6 +82,10 @@ class CuadroInfo extends PolymerElement {
       },
       boton:{
         type: String,
+        value: '',
+      },
+      enlace:{
+        type:String,
         value: '',
       }
     };
