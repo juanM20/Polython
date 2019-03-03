@@ -11,7 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
 -->
-  <script src = "javascript/registro.js"></script>
+  <script src = "registro.js"></script>
   <script type="module" src="menu-p.js" ></script>
   <script type="module" src="cuadro-info.js" ></script>
   <script type="module" src="footer-p.js" ></script>
@@ -88,7 +88,7 @@ necesarios para poder incorporarte a la aplicacion"></cuadro-info>
     <form id = "formDonador">
       <fieldset>
              <i class='fas fa-user-circle'></i>
-             <label> Nombre: </label><input type = "text" name = "nombre" placeholder = "Nombre completo" required/>
+             <label> Nombre: </label><input type = "text" id= "nombre" placeholder = "Nombre completo" required/>
       <br><br>
 
     <i class='fas fa-female'></i>
@@ -120,22 +120,22 @@ necesarios para poder incorporarte a la aplicacion"></cuadro-info>
       <br><br>
 
        <i class="fas fa-home"></i>
-        <input type = "text" name = "ciudad" placeholder = "Ciudad" required/>
+        <input type = "text" id = "ciudad" placeholder = "Ciudad" required/>
       <br><br>
 
       <i class="far fa-envelope"></i>
-      <input type = "email" name = "correo" placeholder = "Correo electrónico" required/>
+      <input type = "email" id = "correo" placeholder = "Correo electrónico" required/>
       <br><br>
 
       <i class="fas fa-plus-square"></i>
       <label>Indica los elementos que estás dispuesto a donar</label> <br><br>
-      <input type = "checkbox" name = "organo1" value = "Riñón">Riñón</input>
-      <input type = "checkbox" name = "organo2" value = "Hígado">Hígado</input>
-      <input type = "checkbox" name = "organo3" value = "Corazón">Corazón</input>
-      <input type = "checkbox" name = "organo4" value = "Páncreas">Páncreas</input> <br> <br>
-      <input type = "checkbox" name = "organo5" value = "Pulmón">Pulmón</input>
-      <input type = "checkbox" name = "organo6" value = "Intestino">Intestino</input>
-      <input type = "checkbox" name = "organo7" value = "Sangre">Sangre</input>
+      <input type = "checkbox" id = "organo1" value = "Riñón">Riñón</input>
+      <input type = "checkbox" id = "organo2" value = "Hígado">Hígado</input>
+      <input type = "checkbox" id = "organo3" value = "Corazón">Corazón</input>
+      <input type = "checkbox" id = "organo4" value = "Páncreas">Páncreas</input> <br> <br>
+      <input type = "checkbox" id = "organo5" value = "Pulmón">Pulmón</input>
+      <input type = "checkbox" id = "organo6" value = "Intestino">Intestino</input>
+      <input type = "checkbox" id = "organo7" value = "Sangre">Sangre</input>
       <br><br>
 
 
@@ -157,7 +157,9 @@ necesarios para poder incorporarte a la aplicacion"></cuadro-info>
       </script>
       <input type="button" name="registrar" value="Registrar" onclick="recuperarDatos()"/>
     </fieldset>
+    <script type="text/javascript" src="registro.js">
 
+    </script>
 
     </form>
 </center>
