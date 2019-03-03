@@ -10,8 +10,6 @@ var certificado = {
   direccion : null;
 };
 
-var firebase = require("firebase/app");
-require("firebase/database");
 
 var config = {
   apiKey: "AIzaSyBYD0g_YPIMeK0icjoysPuK-rFx1qKbmWw",
