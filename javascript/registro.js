@@ -43,7 +43,7 @@ function recuperarDatos() {
     function(){
       tipoSangre = this.options[select.selectedIndex];
       //Notificamos en consola la opción seleccionada
-      console.log(tipoSangre.value + ':' tipoSangre.text);
+      console.log(tipoSangre.value + ':' + tipoSangre.text);
     });
     edad = document.getElementById("edad").value;
     console.log("edad" + ':' edad);
