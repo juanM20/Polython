@@ -16,11 +16,11 @@ let data = {
     name: "Germany"
   }
 }
-Referenciamos al nodo principal
+//Referenciamos al nodo principal
 let dataRef = database.ref('cities');
-Pusheamos los datos al nodo
+//Pusheamos los datos al nodo
 let dataPush = dataRef.push(data);
-Visualizamos los datos al nodo
+//Visualizamos los datos al nodo
 dataRef.once('value', snapshot => {
   console.log(snapshot.val());
 });
