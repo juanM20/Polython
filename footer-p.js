@@ -19,7 +19,9 @@ class FooterP extends PolymerElement {
         footer {
           justify-self: end;
           padding: 0;
+          margin: 0;
           background-color:  #2B4C7E;
+          width:100%;
         }
 
         footer p {
