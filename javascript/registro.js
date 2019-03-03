@@ -3,17 +3,17 @@ function recuperarDatos() {
   const database = firebase.database();
 
   var donante = {
-    nombre = null;
-    genero = null;
-    tipoSangre = null;
-    edad = null;
-    ciudad = null;
-    correoElectronico = null;
-    donacionesOfrecidas = [];
+    nombre = null,
+    genero = null,
+    tipoSangre = null,
+    edad = null,
+    ciudad = null,
+    correoElectronico = null,
+    donacionesOfrecidas = [],
     certificado = {
       nombre : null,
       direccion : null
-    };
+    }
   }
 
   var select;
