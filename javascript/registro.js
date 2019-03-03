@@ -1,20 +1,21 @@
-var donante = {
-  nombre = null;
-  genero = null;
-  tipoSangre = null;
-  edad = null;
-  ciudad = null;
-  correoElectronico = null;
-  donacionesOfrecidas = [];
-  certificado = {
-    nombre : null,
-    direccion : null
-  };
-}
-
-const database = firebase.database();
-
 function recuperarDatos() {
+
+  const database = firebase.database();
+
+  var donante = {
+    nombre = null;
+    genero = null;
+    tipoSangre = null;
+    edad = null;
+    ciudad = null;
+    correoElectronico = null;
+    donacionesOfrecidas = [];
+    certificado = {
+      nombre : null,
+      direccion : null
+    };
+  }
+
   var select;
   console.log("Entrando a la recuperación de datos...");
   donante.nombre = document.getElementById("nombre").value;
