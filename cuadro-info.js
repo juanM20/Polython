@@ -77,7 +77,7 @@ class CuadroInfo extends PolymerElement {
         <div class="info_section">
           <p> [[info]] </p>
           <div class="btn_section">
-            <a href="#" class="button">[[boton]]</a>
+            <a href="[[enlace]]" class="button">[[boton]]</a>
           </div>
         </div>
       </div>
