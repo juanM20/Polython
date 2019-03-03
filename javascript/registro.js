@@ -21,6 +21,7 @@ var config = {
   storageBucket: "polython-organos.appspot.com",
   messagingSenderId: "86826976392"
 };
+debugger;
 firebase.initializeApp(config);
 
 var database = firebase.database();
