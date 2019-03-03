@@ -77,11 +77,11 @@ class MenuP extends PolymerElement {
       <header>
   		<nav class="navegacion">
   			<ul class="menu">
-  				<li><a href="#">Inicio</a></li>
+  				<li><a href="index.html">Inicio</a></li>
   				<li><a href="#">Nosotros</a></li>
   				<li><a href="#">Servicios</a>
   					<ul class="submenu">
-  						<li><a href="#">Registrate como donador</a></li>
+  						<li><a href="formulario.html">Registrate como donador</a></li>
   						<li><a href="#">Buscar Donadores</a></li>
   					</ul>
   				</li>
