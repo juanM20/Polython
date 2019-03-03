@@ -13,12 +13,16 @@ class CuadroInfo extends PolymerElement {
     return html`
       <style>
         div {
-          background-color: #DCE0E6;
+          background-color: #ffffff;
           padding: 10px;
           margin:0;
           display: flex;
           flex-direction: row;
           width: 100%;
+        }
+
+        .section {
+          border-bottom: 1px solid black;
         }
 
         div h2,p {
@@ -27,6 +31,7 @@ class CuadroInfo extends PolymerElement {
 
         div .title_section {
           display: flex;
+          flex-direction: column;
           justify-content: flex-start;
         }
 
@@ -41,7 +46,7 @@ class CuadroInfo extends PolymerElement {
           flex-direction: row;
           justify-content: flex-start;
 
-          background-color: #DCE0E6;
+          background-color: #ffffff;
           border: none;
           color: #000000;
           padding: 15px 32px;
@@ -58,13 +63,13 @@ class CuadroInfo extends PolymerElement {
       <div class="section">
         <div class="title_section">
           <h2> [[titulo]]</h2>
+          <img src="[[imagen]]"></img>
+          <div class="btn_section">
+            <button><a href="[[enlace]]">[[boton]]</a></button>
+          </div>
         </div>
         <div class="info_section">
-          <div></div>
           <p> [[info]] </p>
-        </div>
-        <div class="btn_section">
-          <button><a href="[[enlace]]">[[boton]]</button>
         </div>
       </div>
     `;
