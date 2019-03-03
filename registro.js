@@ -42,8 +42,8 @@ function recuperarDatos() {
     //Almacenamos los datos correspondientes al objeto del certificado
     donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
     //registrarDonante(donante.certificado.nombre);
-    let json = JSON.stringify(donante);
-    enviarJSON(json);
+    var json = JSON.stringify(donante);
+    enviarJSON(json,database,donante);
 }
 
 
@@ -60,7 +60,7 @@ function recuperarDatos() {
   });
 }*/
 
-function enviarJSON(json){
+function enviarJSON(json,database,donante){
   let dataRef = database.ref(''+donante.nombre);
   //Pusheamos los datos al nodo
   let dataPush = dataRef.push(json);
