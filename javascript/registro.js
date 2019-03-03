@@ -7,7 +7,7 @@ var correoElectronico;
 var donacionesOfrecidas = [];
 var certificado = {
   nombre : null,
-  direccion : null;
+  direccion : null
 };
 
 const database = firebase.database();
