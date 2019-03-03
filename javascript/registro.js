@@ -3,17 +3,14 @@ function recuperarDatos() {
   const database = firebase.database();
 
   var donante = {
-    nombre = '',
-    genero = '',
-    tipoSangre = '',
-    edad = 0,
-    ciudad = '',
-    correoElectronico = '',
-    donacionesOfrecidas = [],
-    certificado = {
-      nombre : '',
-      direccion : ''
-    }
+    nombre : '',
+    genero : '',
+    tipoSangre : '',
+    edad : 0,
+    ciudad : '',
+    correoElectronico : '',
+    donacionesOfrecidas : [],
+    certificadoNombre : ''
   }
 
   var select;
@@ -43,7 +40,7 @@ function recuperarDatos() {
     console.log("correo" + ':'  + donante.correo);
     donante.donacionesOfrecidas = revisarOrganosDonacion();
     //Almacenamos los datos correspondientes al objeto del certificado
-    donante.certificado.nombre = generarClaveUnica();
+    donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
     //registrarDonante(donante.certificado.nombre);
     let json = JSON.strigify(donante);
     enviarJSON(json);
