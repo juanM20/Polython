@@ -23,18 +23,37 @@ class MenuP extends PolymerElement {
           padding: 0;
           overflow: hidden;
           flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
         }
+
+        nav ul li {
+          padding: 10px;
+        }
+
+        nav ul li ul > li {
+          display: none;
+        }
+
+        nav ul > ul:hover {
+          position: relative;
+          display: inline-block;
+        }
+
 
       </style>
 
       <nav>
         <ul>
             <li> Inicio </li>
-            <ul>
-              <li>NombreAplicacion</li>
-              <li>Registro de donador</li>
-              <li>Buscar Donadores</li>
-            </ul>
+            <li>
+              <p>Secciones</p>
+              <ul>
+                <li>Nombre Aplicacion</li>
+                <li>Registro de donador</li>
+                <li>Buscar Donadores</li>
+              </ul>
+            </li>
           <li> Login </li>
         </ul>
       </nav>

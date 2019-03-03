@@ -13,20 +13,48 @@ class CuadroInfo extends PolymerElement {
     return html`
       <style>
         div{
-          backgroung-color: #EBF9FA;
+          background-color: #EBF9FA;
           padding: 10px;
           margin: 10px;
-          position: absolute;
+          display: flex;
+          flex-direction: column;
         }
-        h2,p{
+
+        div h2,p {
           text-align:justify;
         }
+
+        div .title_section {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        div .info_section {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+
+        div .btn_section {
+          display:flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
       </style>
 
       <div>
-        <h2> [[titulo]]!</h2> <br>
-        <p> [[info]] </p> <br>
-        <button type="button" >[[boton]]</button>
+        <div class="title_section">
+          <h2> [[titulo]]!</h2>
+        </div>
+        <div class="info_section">
+          <p> [[info]] </p>
+        </div>
+        <div class="btn_section">
+          <button type="button" >[[boton]]</button>
+        </div>
+
       </div>
     `;
   }
