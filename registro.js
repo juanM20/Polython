@@ -11,11 +11,11 @@ function recuperarDatos() {
     correoElectronico: "",
     donacionesOfrecidas: [],
     certificadoNombre: ""
-  },
+  };
 
   var select;
   console.log("Entrando a la recuperación de datos...");
-  donante.nombre = document.getElementById("nombre");
+  donante.nombre = document.getElementById("nombre").value;
   //Creamos un eventListener para el select
   select = document.getElementById("genero");
   select.addEventListener('change',
@@ -26,10 +26,12 @@ function recuperarDatos() {
     });
   select = document.getElementById("tipoSangre");
   //Creamos un eventListener para el select
+  select.addEventListener('change',
+    function(){
       donante.tipoSangre = this.options[select.selectedIndex];
       //Notificamos en consola la opción seleccionada
-      console.log("tipoSangre" + ':' + tipoSangre.value);
-    //});
+      console.log(tipoSangre.value + ':' + tipoSangre.text);
+    });
     donante.edad = document.getElementById("edad").value;
     console.log("edad" + ':' + donante.edad);
     donante.ciudad = document.getElementById("ciudad").value;
@@ -40,7 +42,7 @@ function recuperarDatos() {
     //Almacenamos los datos correspondientes al objeto del certificado
     donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
     //registrarDonante(donante.certificado.nombre);
-    let json = JSON.stringify(donante);
+    let json = JSON.strigify(donante);
     enviarJSON(json);
 }
 
