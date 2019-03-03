@@ -8,41 +8,30 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
  * @polymer
  * @demo demo/index.html
  */
-class CuadroInfo extends PolymerElement {
+class Donator extends PolymerElement {
   static get template() {
     return html`
       <style>
         div{
-          background-color: #DCE0E6;
+          background-color: #EBF9FA;
           padding: 10px;
-          margin:0;
-          display: flex;
-          flex-direction: row;
-          width: 100%;
-        }
-
-        div h2,p {
-          text-align:justify;
-        }
-
-        div .title_section {
-          display: flex;
-          justify-content: flex-start;
-        }
-
-        div .info_section {
+          margin: 10px;
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
-          fex-basis: 50px;
         }
 
-        div .btn_section {
+        div .donator_info {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+
+        div .btn_match {
           display:flex;
           flex-direction: row;
           justify-content: flex-start;
 
-          background-color: #DCE0E6;
+          background-color: #EBF9FA;
           border: none;
           color: #000000;
           padding: 15px 32px;
@@ -58,15 +47,15 @@ class CuadroInfo extends PolymerElement {
       </style>
 
       <div>
-        <div class="title_section">
-          <h2> [[titulo]]</h2>
+        <div class = "image">
+          <img src = "[[dir_img]]"/>
         </div>
-        <div class="info_section">
-          <div></div>
-          <p> [[info]] </p>
+        <div class="donator_info">
+          <p> [[nombre]] </p>
+          <p>[[info]]</p>
         </div>
-        <div class="btn_section">
-          <a href="[[enlace]]">[[boton]]</button>
+        <div class="btn_match">
+          <input type = "button" value = "match" name = "match">
         </div>
 
       </div>
@@ -74,24 +63,20 @@ class CuadroInfo extends PolymerElement {
   }
   static get properties() {
     return {
-      titulo: {
+      dir_img: {
         type: String,
         value: '',
       },
-      info: {
+      nombre: {
         type: String,
         value: '',
       },
-      boton:{
+      info:{
         type: String,
-        value: '',
-      },
-      enlace:{
-        type:String,
         value: '',
       }
     };
   }
 }
 
-window.customElements.define('cuadro-info', CuadroInfo);
+window.customElements.define('donator', Donator);

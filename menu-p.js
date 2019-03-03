@@ -16,63 +16,65 @@ class MenuP extends PolymerElement {
           display: block;
         }
 
+        .menu {
+          overflow: hidden;
+          position: fixed;
+          margin: 0;
+          padding: 10px;
+          width: 100%;
+          top: 0;
+        }
+
         nav ul {
           background: #2B4C7E;
           color: #FFFFFF;
-          display: flex;
+          text-align: center;
+          display: grid;
           list-style-type: none;
           margin: 0;
           padding: 0;
-          flex-direction: row;
-          flex-wrap: wrap;
+          grid-template-columns: 240px 250px 350px 350px;
+          grid-template-rows: auto;
         }
 
         nav ul li {
-          padding: 10px;
+          padding: 5px;
           transition-duration: 0.5s;
           transition-timing-function: linear;
         }
 
-        nav ul li ul > li {
+        nav ul li ul {
           display: none;
         }
 
         nav ul li:hover {
-            background: #FFFFFF;
-            color: #000000;
+          background: #DCE0E6;
+          color: #000000;
         }
 
-        nav ul li ul:nth-child(1){
-          flex-basis: auto;
+        nav ul li:hover > ul {
+          display: flex;
+          flex-direction: column;
         }
-
-        nav ul li ul:nth-child(2){
-          flex-basis: auto;
-        }
-
-        nav ul li ul:nth-child(3){
-          flex-basis: auto;
-        }
-
-
-
 
       </style>
 
-      <nav>
-        <ul>
-            <li><p> Inicio </p></li>
-            <li>
-              <p>Secciones</p>
-              <ul>
-                <li class="cont1">Nombre Aplicacion</li>
-                <li class="cont2">Registro de donador</li>
-                <li class="cont3">Buscar Donadores</li>
-              </ul>
-            </li>
-          <li><p> Login </p></li>
-        </ul>
-      </nav>
+      <div class="menu">
+        <nav>
+          <ul>
+              <li><p> Inicio </p></li>
+              <li>
+                <p>Secciones</p>
+                <ul>
+                  <li class="cont1">Nombre Aplicacion</li>
+                  <li class="cont2">Registro de donador</li>
+                  <li class="cont3">Buscar Donadores</li>
+                </ul>
+              </li>
+            <li><div class="login"><p> Login </p></div></li>
+          </ul>
+        </nav>
+      </div>
     `;
   }
 
