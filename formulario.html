@@ -52,25 +52,30 @@
           background-color: #3333cc;
         }
        form fieldset{
-            margin: 30px 130px;
+            margin: 30px 250px;
         }
           </style>
 <body>
 <center>
-  <form id = "formDonador">
+
+
+    <form id = "formDonador">
       <fieldset>
-            <i class='fas fa-user-circle'></i> <input type = "text" name = "nombre" placeholder = "Nombre completo" required/>
+             <i class='fas fa-user-circle'></i>
+             <label> Nombre: </label><input type = "text" name = "nombre" placeholder = "Nombre completo" required/>
       <br><br>
-      <i class='fas fa-female'></i>
+
+    <i class='fas fa-female'></i>
       <i class='fas fa-male'></i>
       <label>Seleccione su género:</label>
       <select>
         <option value = "masculino">Masculino</option>
         <option value = "femenino">Femenino</option>
-      </select> <br><br>
+      </select>
+       <br><br>
 
       <i class='fas fa-syringe'></i>
-      <label>Seleccione el tipo de sangre:</label>
+        <label>Seleccione el tipo de sangre:</label>
       <select>
         <option value = "A+">A+</option>
         <option value = "A-">A-</option>
@@ -84,12 +89,13 @@
       <br><br>
 
       <i class="fas fa-mobile-alt"> </i>
-      <input type = "number" name = "edad" placeholder = "Edad" required/>
+       <input type = "number" name = "edad" placeholder = "Edad" required/>
       <br><br>
 
-      <i class="fas fa-home"></i>
-      <input type = "text" name = "ciudad" placeholder = "Ciudad" required/>
+       <i class="fas fa-home"></i>
+        <input type = "text" name = "ciudad" placeholder = "Ciudad" required/>
       <br><br>
+
       <i class="far fa-envelope"></i>
       <input type = "email" name = "correo" placeholder = "Correo electrónico" required/>
       <br><br>
@@ -99,15 +105,14 @@
       <input type = "checkbox" name = "organo1" value = "Riñón">Riñón</input>
       <input type = "checkbox" name = "organo2" value = "Hígado">Hígado</input>
       <input type = "checkbox" name = "organo3" value = "Corazón">Corazón</input>
-      <input type = "checkbox" name = "organo4" value = "Páncreas">Páncreas</input>
-      <br><br>
+      <input type = "checkbox" name = "organo4" value = "Páncreas">Páncreas</input> <br> <br>
       <input type = "checkbox" name = "organo5" value = "Pulmón">Pulmón</input>
       <input type = "checkbox" name = "organo6" value = "Intestino">Intestino</input>
       <input type = "checkbox" name = "organo7" value = "Sangre">Sangre</input>
       <br><br>
 
 
-      <input type = "file" name = "certificado" id ="certificado" required/>
+    <input type = "file" name = "certificado" id ="certificado" required/>
       <label for = "certificado" class="archivo">Sube tu certificado médico</label>
       <!--<input type="file" name="archivo" />-->
       <br><br>
@@ -115,7 +120,7 @@
     </fieldset>
 
 
-  </form>
+    </form>
 </center>
 </body>
 </html>
