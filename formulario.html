@@ -12,6 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
 -->
   <script src = "javascript/registro.js"></script>
+  <script type="module" src="menu-p.js" ></script>
 </head>
 <style>
     form input {
@@ -31,9 +32,21 @@
             border-radius: 2px;
             padding: 10px 10px;
           }
+          form input[type=button]{
+            width:200px;
+            height:50px;
+            font-size: 20px;
+            background: #69D300;
+            transition: all 0.5s;
+          }
+          form input[type=button]:hover{
+              box-shadow: -8px 4px 69px -16px rgba(0,0,0,0.75);
+              background: #42D000;
+          }
+
           form input[type=file]{
-            width: 0.1px;
-            height: 0.1px;
+            width: 10px;
+            height: 10px;
             opacity: 0;
             position: absolute;
             overflow: hidden;
@@ -61,7 +74,12 @@
         }
           </style>
 <body>
+
+<menu-p></menu-p>
+
+
 <center>
+
 
 
     <form id = "formDonador">
