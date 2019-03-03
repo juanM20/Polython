@@ -46,11 +46,11 @@ function recuperarDatos() {
       console.log(tipoSangre.value + ':' + tipoSangre.text);
     });
     edad = document.getElementById("edad").value;
-    console.log("edad" + ':' edad);
+    console.log("edad" + ':' + edad);
     ciudad = document.getElementById("ciudad").value;
-    console.log("ciudad" + ':' ciudad);
+    console.log("ciudad" + ':' + ciudad);
     correo = document.getElementById("correo").value;
-    console.log("correo" + ':' correo);
+    console.log("correo" + ':'  + correo);
     donacionesOfrecidas = revisarOrganosDonacion();
     //Almacenamos los datos correspondientes al objeto del certificado
     certificado.nombre = generarClaveUnica();
