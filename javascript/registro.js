@@ -1,18 +1,55 @@
-var nombre;
-var genero;
-var tipoSangre;
-var edad;
-var ciudad;
-var correoElectronico;
-var donacionesOfrecidas = [];
-var certificado = {
-  nombre : null,
-  direccion : null
-};
+var donante = {
+  nombre = null;
+  genero = null;
+  tipoSangre = null;
+  edad = null;
+  ciudad = null;
+  correoElectronico = null;
+  donacionesOfrecidas = [];
+  certificado = {
+    nombre : null,
+    direccion : null
+  };
+}
 
 const database = firebase.database();
 
-function registrarDonante(userID){
+function recuperarDatos() {
+  var select;
+  console.log("Entrando a la recuperación de datos...");
+  donante.nombre = document.getElementById("nombre").value;
+  //Creamos un eventListener para el select
+  select = document.getElementById("genero");
+  select.addEventListener('change',
+    function(){
+      donante.tipoSangre = this.options[select.selectedIndex];
+      //Notificamos en consola la opción seleccionada
+      //console.log(tipoSangre.value + ':' tipoSangre.text);
+    });
+  select = document.getElementById("tipoSangre");
+  //Creamos un eventListener para el select
+  select.addEventListener('change',
+    function(){
+      donante.tipoSangre = this.options[select.selectedIndex];
+      //Notificamos en consola la opción seleccionada
+      console.log(tipoSangre.value + ':' + tipoSangre.text);
+    });
+    donante.edad = document.getElementById("edad").value;
+    console.log("edad" + ':' + donante.edad);
+    donante.ciudad = document.getElementById("ciudad").value;
+    console.log("ciudad" + ':' + donante.ciudad);
+    donante.correo = document.getElementById("correo").value;
+    console.log("correo" + ':'  + donante.correo);
+    donante.donacionesOfrecidas = revisarOrganosDonacion();
+    //Almacenamos los datos correspondientes al objeto del certificado
+    donante.certificado.nombre = generarClaveUnica();
+    //registrarDonante(donante.certificado.nombre);
+    let json = JSON.strigify(donante);
+    enviarJSON(json);
+}
+
+
+/*function registrarDonante(userID){
   database.ref('Donante/' + userID).set({
     nombre : nombre,
     genero : genero,
@@ -23,38 +60,16 @@ function registrarDonante(userID){
     donaciones : donacionesOfrecidas,
     certificado : certificado
   });
-}
+}*/
 
-function recuperarDatos() {
-  var select;
-  console.log("Entrando a la recuperación de datos...");
-  nombre = document.getElementById("nombre").value;
-  //Creamos un eventListener para el select
-  select = document.getElementById("genero");
-  select.addEventListener('change',
-    function(){
-      tipoSangre = this.options[select.selectedIndex];
-      //Notificamos en consola la opción seleccionada
-      //console.log(tipoSangre.value + ':' tipoSangre.text);
-    });
-  select = document.getElementById("tipoSangre");
-  //Creamos un eventListener para el select
-  select.addEventListener('change',
-    function(){
-      tipoSangre = this.options[select.selectedIndex];
-      //Notificamos en consola la opción seleccionada
-      console.log(tipoSangre.value + ':' + tipoSangre.text);
-    });
-    edad = document.getElementById("edad").value;
-    console.log("edad" + ':' + edad);
-    ciudad = document.getElementById("ciudad").value;
-    console.log("ciudad" + ':' + ciudad);
-    correo = document.getElementById("correo").value;
-    console.log("correo" + ':'  + correo);
-    donacionesOfrecidas = revisarOrganosDonacion();
-    //Almacenamos los datos correspondientes al objeto del certificado
-    certificado.nombre = generarClaveUnica();
-    registrarDonante(certificado.nombre);
+function enviarJSON(json){
+  let dataRef = database.ref(''+donante.nombre);
+  //Pusheamos los datos al nodo
+  let dataPush = dataRef.push(json);
+  //Visualizamos los datos al nodo
+  dataRef.once('value', snapshot => {
+    console.log(snapshot.val());
+  });
 }
 
 function generarClaveUnica(nombre,ciudad,edad){
