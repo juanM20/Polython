@@ -13,35 +13,43 @@ function recuperarDatos() {
     certificadoNombre: ""
   };
 
-  var select;
+  var nombre = document.getElementById("nombre").value;
+  var lista_genero = document.getElementById("genero");
+  var valor_genero = lista_genero.options[lista_genero.selectedIndex].value;
+
+  var lista_sangre = document.getElementById("tipoSangre");
+  var valor_sangre = lista_sangre.options[lista_sangre.selectedIndex].value;
+
+  var edad = document.getElementById("edad").value;
+  var ciudad = document.getElementById("ciudad").value;
+  var correo = document.getElementById("correo").value;
+
+
   console.log("Entrando a la recuperación de datos...");
-  donante.nombre = document.getElementById("nombre").value;
-  //Creamos un eventListener para el select
-  select = document.getElementById("genero");
-  select.addEventListener('change',
-    function(){
-      donante.tipoSangre = this.options[select.selectedIndex];
-      //Notificamos en consola la opción seleccionada
-      //console.log(tipoSangre.value + ':' tipoSangre.text);
-    });
-  select = document.getElementById("tipoSangre");
-  //Creamos un eventListener para el select
-  select.addEventListener('change',
-    function(){
-      donante.tipoSangre = this.options[select.selectedIndex];
-      //Notificamos en consola la opción seleccionada
-      console.log(tipoSangre.value + ':' + tipoSangre.text);
-    });
-    donante.edad = document.getElementById("edad").value;
-    console.log("edad" + ':' + donante.edad);
-    donante.ciudad = document.getElementById("ciudad").value;
-    console.log("ciudad" + ':' + donante.ciudad);
-    donante.correo = document.getElementById("correo").value;
-    console.log("correo" + ':'  + donante.correo);
-    donante.donacionesOfrecidas = revisarOrganosDonacion();
-    //Almacenamos los datos correspondientes al objeto del certificado
-    donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
-    //registrarDonante(donante.certificado.nombre);
+
+  donante.nombre = nombre;
+  console.log("Nombre: "+ donante.nombre);
+
+  donante.genero = valor_genero;
+  console.log("Genero: "+ donante.genero);
+
+  donante.tipoSangre = valor_sangre;
+  console.log("Tipo de Sangre: "+ donante.tipoSangre);
+
+  donante.edad = edad;
+  console.log("Edad: "+ donante.edad);
+
+  donante.ciudad = ciudad;
+  console.log("ciudad: " + donante.ciudad);
+
+  donante.correo = correo;
+  console.log("correo: " + donante.correo);
+
+  donante.donacionesOfrecidas = revisarOrganosDonacion();
+  //Almacenamos los datos correspondientes al objeto del certificado
+  donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
+  //registrarDonante(donante.certificado.nombre);
+
     var json = JSON.stringify(donante);
     enviarJSON(json,database,donante);
 }
