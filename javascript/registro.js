@@ -26,6 +26,7 @@ function registrarDonante(userID){
 
 function recuperarDatos() {
   var select;
+  console.log("Entrando a la recuperación de datos...");
   nombre = document.getElementById("nombre").value;
   //Creamos un eventListener para el select
   select = document.getElementById("genero");
