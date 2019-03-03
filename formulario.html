@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FormularioDeRegistro</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
+<style>
+    form input {
+            border-radius: 5px;
+            border-bottom: 3px #2B4C7E;
+            padding: 10px 10px;
+            margin: 10px;
+          }
+          form select {
+            border-radius: 5px;
+            padding: 10px 10px;
+            margin: 10px;
+          }
+          form input[type=submit]{
+            color: #FFFFFF;
+            background-color: #2B4C7E;
+            border-radius: 2px;
+            padding: 10px 10px;
+          }
+          form input[type=file]{
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            position: absolute;
+            overflow: hidden;
+            z-index: -1;
+          }
+          form label {
+            font-family: sans-serif;
+            font-size: 14pt;
+          }
+          .archivo {
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 10px 10px;
+          font-size: 1.25em;
+          font-weight: 700;
+          color: white;
+          background-color: #2B4C7E;
+          display: inline-block;
+        }
+        .archivo:hover {
+          background-color: #3333cc;
+        }
+       form fieldset{
+            margin: 30px 130px;
+        }
+          </style>
 <body>
+<center>
   <form id = "formDonador">
-    <center>
-    <input type = "text" name = "nombre" placeholder = "Nombre completo" required/>
+      <fieldset>
+            <i class='fas fa-user-circle'></i> <input type = "text" name = "nombre" placeholder = "Nombre completo" required/>
       <br><br>
+      <i class='fas fa-female'></i>
+      <i class='fas fa-male'></i>
       <label>Seleccione su género:</label>
       <select>
         <option value = "masculino">Masculino</option>
         <option value = "femenino">Femenino</option>
-      </select>
+      </select> <br><br>
+
+      <i class='fas fa-syringe'></i>
       <label>Seleccione el tipo de sangre:</label>
       <select>
         <option value = "A+">A+</option>
@@ -28,26 +82,40 @@
         <option value = "AB-">AB-</option>
       </select>
       <br><br>
+
+      <i class="fas fa-mobile-alt"> </i>
       <input type = "number" name = "edad" placeholder = "Edad" required/>
+      <br><br>
+
+      <i class="fas fa-home"></i>
       <input type = "text" name = "ciudad" placeholder = "Ciudad" required/>
+      <br><br>
+      <i class="far fa-envelope"></i>
       <input type = "email" name = "correo" placeholder = "Correo electrónico" required/>
       <br><br>
-      <label>Indica los elementos que estás dispuesto a donar</label>
+
+      <i class="fas fa-plus-square"></i>
+      <label>Indica los elementos que estás dispuesto a donar</label> <br><br>
       <input type = "checkbox" name = "organo1" value = "Riñón">Riñón</input>
       <input type = "checkbox" name = "organo2" value = "Hígado">Hígado</input>
       <input type = "checkbox" name = "organo3" value = "Corazón">Corazón</input>
       <input type = "checkbox" name = "organo4" value = "Páncreas">Páncreas</input>
+      <br><br>
       <input type = "checkbox" name = "organo5" value = "Pulmón">Pulmón</input>
       <input type = "checkbox" name = "organo6" value = "Intestino">Intestino</input>
       <input type = "checkbox" name = "organo7" value = "Sangre">Sangre</input>
       <br><br>
-      <br>
+
+
       <input type = "file" name = "certificado" id ="certificado" required/>
       <label for = "certificado" class="archivo">Sube tu certificado médico</label>
+      <!--<input type="file" name="archivo" />-->
       <br><br>
       <input type="submit" name="registrar" value="Registrar" />
-    </center>
-  </form>
+    </fieldset>
 
+
+  </form>
+</center>
 </body>
 </html>
