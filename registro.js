@@ -42,7 +42,7 @@ function recuperarDatos() {
     //Almacenamos los datos correspondientes al objeto del certificado
     donante.certificadoNombre = generarClaveUnica(donante.nombre,donante.ciudad,donante.edad);
     //registrarDonante(donante.certificado.nombre);
-    let json = JSON.strigify(donante);
+    let json = JSON.stringify(donante);
     enviarJSON(json);
 }
 
