@@ -122,6 +122,18 @@
       <label for = "certificado" class="archivo">Sube tu certificado médico</label>
       <!--<input type="file" name="archivo" />-->
       <br><br>
+      <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+      <script>
+        var config = {
+          apiKey: "AIzaSyBYD0g_YPIMeK0icjoysPuK-rFx1qKbmWw",
+          authDomain: "polython-organos.firebaseapp.com",
+          databaseURL: "https://polython-organos.firebaseio.com",
+          projectId: "polython-organos",
+          storageBucket: "polython-organos.appspot.com",
+          messagingSenderId: "86826976392"
+        };
+        firebase.initializeApp(config);
+      </script>
       <input type="button" name="registrar" value="Registrar" onclick="registro.js"/>
     </fieldset>
 
@@ -129,18 +141,6 @@
     </form>
 </center>
 
-<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-<script>
-  var config = {
-    apiKey: "AIzaSyBYD0g_YPIMeK0icjoysPuK-rFx1qKbmWw",
-    authDomain: "polython-organos.firebaseapp.com",
-    databaseURL: "https://polython-organos.firebaseio.com",
-    projectId: "polython-organos",
-    storageBucket: "polython-organos.appspot.com",
-    messagingSenderId: "86826976392"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src = "prueba.js"></script>
+
 </body>
 </html>
