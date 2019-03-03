@@ -9,10 +9,21 @@ var certificado = {
   nombre : null;
   direccion : null;
 };
+
+var config = {
+  apiKey: "AIzaSyBYD0g_YPIMeK0icjoysPuK-rFx1qKbmWw",
+  authDomain: "polython-organos.firebaseapp.com",
+  databaseURL: "https://polython-organos.firebaseio.com",
+  projectId: "polython-organos",
+  storageBucket: "polython-organos.appspot.com",
+  messagingSenderId: "86826976392"
+};
+firebase.initializeApp(config);
+
 var database = firebase.database();
 
 function registrarDonante(userID){
-  firebase.database().ref('donantes/' + userID).set({
+  database.ref('Donante/' + userID).set({
     nombre : nombre,
     genero : genero,
     tipoSangre : tipoSangre,
