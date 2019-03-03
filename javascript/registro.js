@@ -3,15 +3,15 @@ function recuperarDatos() {
   const database = firebase.database();
 
   var donante = {
-    nombre : '',
-    genero : '',
-    tipoSangre : '',
+    nombre : "",
+    genero : "",
+    tipoSangre : "",
     edad : 0,
-    ciudad : '',
-    correoElectronico : '',
+    ciudad : "",
+    correoElectronico : "",
     donacionesOfrecidas : [],
-    certificadoNombre : ''
-  }
+    certificadoNombre : ""
+  };
 
   var select;
   console.log("Entrando a la recuperación de datos...");
