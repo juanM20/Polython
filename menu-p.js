@@ -17,44 +17,60 @@ class MenuP extends PolymerElement {
         }
 
         nav ul {
+          background: #2B4C7E;
+          color: #FFFFFF;
           display: flex;
           list-style-type: none;
           margin: 0;
           padding: 0;
-          overflow: hidden;
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: space-between;
         }
 
         nav ul li {
           padding: 10px;
+          transition-duration: 0.5s;
+          transition-timing-function: linear;
         }
 
         nav ul li ul > li {
           display: none;
         }
 
-        nav ul > ul:hover {
-          position: relative;
-          display: inline-block;
+        nav ul li:hover {
+            background: #FFFFFF;
+            color: #000000;
         }
+
+        nav ul li ul:nth-child(1){
+          flex-basis: auto;
+        }
+
+        nav ul li ul:nth-child(2){
+          flex-basis: auto;
+        }
+
+        nav ul li ul:nth-child(3){
+          flex-basis: auto;
+        }
+
+
 
 
       </style>
 
       <nav>
         <ul>
-            <li> Inicio </li>
+            <li><p> Inicio </p></li>
             <li>
               <p>Secciones</p>
               <ul>
-                <li>Nombre Aplicacion</li>
-                <li>Registro de donador</li>
-                <li>Buscar Donadores</li>
+                <li class="cont1">Nombre Aplicacion</li>
+                <li class="cont2">Registro de donador</li>
+                <li class="cont3">Buscar Donadores</li>
               </ul>
             </li>
-          <li> Login </li>
+          <li><p> Login </p></li>
         </ul>
       </nav>
     `;
