@@ -38,33 +38,24 @@ class CuadroInfo extends PolymerElement {
         div .info_section {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-
-        }
-
-        div .info_section p {
-          max-width: 300px;
+          justify-content: flex-end;
         }
 
         div .btn_section {
+          display:flex;
+          flex-direction: row;
+          justify-content: flex-start;
 
-          color: #ffffff;
+          background-color: #ffffff;
+          border: none;
+          color: #000000;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
           font-size: 16px;
           margin: 4px 2px;
           cursor: pointer;
           width:10%;
-        }
-
-        div .btn_section .button {
-          text-decoration: none;
-          color: #000000;
-          border-radius: 10px;
-          padding: 20px;
-          text-align:center;
-          text-decoration: none;
-          background-color: #69D300;
-          box-shadow: -8px 4px 69px -16px rgba(0,0,0,0.75);
-
         }
 
       </style>
@@ -72,13 +63,13 @@ class CuadroInfo extends PolymerElement {
       <div class="section">
         <div class="title_section">
           <h2> [[titulo]]</h2>
-          <img src="[[imagen]]" style="width: [[tamanio]];"></img>
+          <img src="[[imagen]]"></img>
+          <div class="btn_section">
+            <button><a href="[[enlace]]">[[boton]]</a></button>
+          </div>
         </div>
         <div class="info_section">
           <p> [[info]] </p>
-          <div class="btn_section">
-            <a href="#" class="button">[[boton]]</a>
-          </div>
         </div>
       </div>
     `;
@@ -98,10 +89,6 @@ class CuadroInfo extends PolymerElement {
         value: '',
       },
       imagen:{
-        type: String,
-        value: '',
-      },
-      tamanio: {
         type: String,
         value: '',
       },
