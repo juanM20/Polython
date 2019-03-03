@@ -35,6 +35,10 @@ class CuadroInfo extends PolymerElement {
           justify-content: flex-start;
         }
 
+        div .title_section h2{
+          font-size: 40px;
+        }
+
         div .info_section {
           display: flex;
           flex-direction: column;
@@ -44,6 +48,7 @@ class CuadroInfo extends PolymerElement {
 
         div .info_section p {
           max-width: 300px;
+          font-size: 20px;
         }
 
         div .btn_section {
@@ -52,17 +57,23 @@ class CuadroInfo extends PolymerElement {
           font-size: 16px;
           margin: 4px 2px;
           cursor: pointer;
-          width:10%;
+          width:20%;
         }
 
         div .btn_section .button {
           text-decoration: none;
           color: #000000;
+          width:85px;
           border-radius: 10px;
           padding: 20px;
           text-align:center;
           text-decoration: none;
           background-color: #69D300;
+          transition: all 0.5s;
+
+        }
+
+        div .btn_section .button:hover {
           box-shadow: -8px 4px 69px -16px rgba(0,0,0,0.75);
 
         }
