@@ -17,6 +17,9 @@ class FooterP extends PolymerElement {
         }
 
         footer {
+          display:flex;
+          display-direction: row;
+          justify-content: center;
           justify-self: end;
           padding: 10px;
           margin: 5px;
