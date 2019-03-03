@@ -58,7 +58,7 @@ class CuadroInfo extends PolymerElement {
 
       <div>
         <div class="title_section">
-          <h2> [[titulo]]!</h2>
+          <h2> [[titulo]]</h2>
         </div>
         <div class="info_section">
           <p> [[info]] </p>
