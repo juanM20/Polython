@@ -12,7 +12,7 @@ class CuadroInfo extends PolymerElement {
   static get template() {
     return html`
       <style>
-        div{
+        div {
           background-color: #DCE0E6;
           padding: 10px;
           margin:0;
@@ -34,7 +34,6 @@ class CuadroInfo extends PolymerElement {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          fex-basis: 50px;
         }
 
         div .btn_section {
@@ -48,7 +47,6 @@ class CuadroInfo extends PolymerElement {
           padding: 15px 32px;
           text-align: center;
           text-decoration: none;
-          display: inline-block;
           font-size: 16px;
           margin: 4px 2px;
           cursor: pointer;
@@ -57,7 +55,7 @@ class CuadroInfo extends PolymerElement {
 
       </style>
 
-      <div>
+      <div class="section">
         <div class="title_section">
           <h2> [[titulo]]</h2>
         </div>
@@ -66,9 +64,8 @@ class CuadroInfo extends PolymerElement {
           <p> [[info]] </p>
         </div>
         <div class="btn_section">
-          <a href="[[enlace]]">[[boton]]</button>
+          <button><a href="[[enlace]]">[[boton]]</button>
         </div>
-
       </div>
     `;
   }
@@ -83,6 +80,10 @@ class CuadroInfo extends PolymerElement {
         value: '',
       },
       boton:{
+        type: String,
+        value: '',
+      },
+      imagen:{
         type: String,
         value: '',
       },

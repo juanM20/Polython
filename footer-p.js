@@ -18,16 +18,17 @@ class FooterP extends PolymerElement {
 
         footer {
           justify-self: end;
-          padding: 0;
-          margin: 0;
-          background-color:  #2B4C7E;
+          padding: 10px;
+          margin: 5px;
+          border-top: 2px solid black;
+          background-color:  #ffffff;
           width:100%;
         }
 
         footer p {
           font-family: sans-serif;
           font-size: 12pt;
-          color: #FFFFFF;
+          color: #CE7D35;
         }
 
       </style>

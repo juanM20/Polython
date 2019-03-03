@@ -16,65 +16,79 @@ class MenuP extends PolymerElement {
           display: block;
         }
 
-        .menu {
-          overflow: hidden;
-          position: fixed;
-          margin: 0;
-          padding: 10px;
-          width: 100%;
-          top: 0;
+        header{
+	         width: 100%;
         }
 
-        nav ul {
-          background: #2B4C7E;
-          color: #FFFFFF;
-          text-align: center;
-          display: grid;
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          grid-template-columns: 240px 250px 350px 350px;
-          grid-template-rows: auto;
-        }
+      .navegacion{
+      	width: 1000px;
+      	margin: 30px auto;
+      	background: #fff;
+      }
 
-        nav ul li {
-          padding: 5px;
-          transition-duration: 0.5s;
-          transition-timing-function: linear;
-        }
+      .navegacion ul{
+      	list-style: none;
+      }
 
-        nav ul li ul {
-          display: none;
-        }
+      .menu > li{
+      	position: relative;
+      	display: inline-block;
+      }
 
-        nav ul li:hover {
-          background: #DCE0E6;
-          color: #000000;
-        }
+      .menu > li > a{
+      	display: block;
+      	padding: 15px 20px;
+      	color: #353535;
+      	font-family: 'Open sans';
+      	text-decoration: none;
+      }
 
-        nav ul li:hover > ul {
-          display: flex;
-          flex-direction: column;
-        }
+      .menu li a:hover{
+      	color: #CE7D35;
+      	transition: all .3s;
+      }
+
+      /* Submenu*/
+
+      .submenu{
+      	position: absolute;
+      	background: #333333;
+      	width: 120%;
+      	visibility: hidden;
+      	opacity: 0;
+      	transition: opacity 1.5s;
+      }
+
+      .submenu li a{
+      	display: block;
+      	padding: 15px;
+      	color: #fff;
+      	font-family: 'Open sans';
+      	text-decoration: none;
+      }
+
+      .menu li:hover .submenu{
+      	visibility: visible;
+      	opacity: 1;
+      }
 
       </style>
 
-      <div class="menu">
-        <nav>
-          <ul>
-              <li><p> Inicio </p></li>
-              <li>
-                <p>Secciones</p>
-                <ul>
-                  <li class="cont1">Nombre Aplicacion</li>
-                  <li class="cont2">Registro de donador</li>
-                  <li class="cont3">Buscar Donadores</li>
-                </ul>
-              </li>
-            <li><div class="login"><p> Login </p></div></li>
-          </ul>
-        </nav>
-      </div>
+      <header>
+  		<nav class="navegacion">
+  			<ul class="menu">
+  				<li><a href="#">Inicio</a></li>
+  				<li><a href="#">Nosotros</a></li>
+  				<li><a href="#">Servicios</a>
+  					<ul class="submenu">
+  						<li><a href="#">Registrate como donador</a></li>
+  						<li><a href="#">Buscar Donadores</a></li>
+  					</ul>
+  				</li>
+  				<li><a href="#">Contacto</a></li>
+  			</ul>
+  		</nav>
+  	</header>
     `;
   }
 
