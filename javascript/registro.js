@@ -23,7 +23,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 function registrarDonante(userID){
-  firebase.database().ref('donantes/' + userID).set({
+  database.ref('Donante/' + userID).set({
     nombre : nombre,
     genero : genero,
     tipoSangre : tipoSangre,
