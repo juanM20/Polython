@@ -12,14 +12,22 @@ class CuadroInfo extends PolymerElement {
   static get template() {
     return html`
       <style>
-        :host {
-          display: block;
+        div{
+          backgroung-color: #EBF9FA;
+          padding: 10px;
+          margin: 10px;
+          position: absolute;
+        }
+        h2,p{
+          text-align:justify;
         }
       </style>
-      <h2> [[titulo]]!</h2> <br>
-      <p> [[info]] </p> <br>
-      <button type="button" >[[boton]]</button>
 
+      <div>
+        <h2> [[titulo]]!</h2> <br>
+        <p> [[info]] </p> <br>
+        <button type="button" >[[boton]]</button>
+      </div>
     `;
   }
   static get properties() {
